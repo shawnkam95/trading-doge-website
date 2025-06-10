@@ -69,7 +69,16 @@
     }
 
     /* advantage cards */
-    .adv-box{background:#ffffff0d;border-radius:var(--radius);padding:1.5rem;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+    .adv-box{
+      background:transparent;           /* let page gradient show */
+      border:2px solid #00e5ff80;       /* cyan outline */
+      border-radius:var(--radius);
+      padding:1.5rem;
+      box-shadow:0 0 10px #00e5ff40;    /* soft glow */
+      transition:transform .2s ease,box-shadow .2s ease;
+    }
+    .adv-box:hover{transform:translateY(-4px);box-shadow:0 4px 14px #00e5ff80;}
+    .adv-box h4{margin-bottom:.5rem;font-size:1.15rem}
     .adv-box h4{margin-bottom:.5rem}
 
     /* timeline */
