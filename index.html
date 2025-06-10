@@ -61,26 +61,9 @@
     /* keep section-three title on one line */
     #advantages h2{font-size:clamp(1.4rem,3vw,2rem);white-space:normal;}
 
-    #advantages .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-    max-width: 100%;        /* prevent overflow */
-    }
-
-    /* advantage cards */
-    .adv-box{
-      background:transparent;           /* let page gradient show */
-      border:2px solid #00e5ff80;       /* cyan outline */
-      border-radius:var(--radius);
-      padding:1.5rem;
-      box-shadow:0 0 10px #00e5ff40;    /* soft glow */
-      transition:transform .2s ease,box-shadow .2s ease;
-    }
-    .adv-box:hover{transform:translateY(-4px);box-shadow:0 4px 14px #00e5ff80;}
-    .adv-box h4{margin-bottom:.5rem;font-size:1.15rem}
-    .adv-box h4{margin-bottom:.5rem}
-
+     /* advantage simple item */
+    .adv-item h4{margin-bottom:.5rem;font-size:1.1rem}
+    
     /* timeline */
     .timeline{position:relative;list-style:none;padding-left:3.5rem;margin-top:.75rem}
     .timeline::before{content:"";position:absolute;left:1.5rem;top:0;bottom:0;width:2px;background:#ffffff55}
@@ -191,37 +174,18 @@
 
 <!-- ============== SECTION 3 ============== -->
 <section id="advantages" class="card">
-  <div class="card-content">
-    <h2>Trading Doge社群推廣計劃優勢</h2>
-
-    <div class="grid-2">
-      <div class="adv-box">
-        <h4>官方強力支援</h4>
-        <p>作為 Trading Doge 社群的推廣夥伴，共同享有官方扶持政策資源，開發與支援同一參與。</p>
+      <div class="card-content">
+        <h2>Trading Doge社群推廣計劃優勢</h2>
+        <div class="grid-2">
+          <div class="adv-item"><h4>官方強力支援</h4><p>共享官方扶持與資源，快速啟動。</p></div>
+          <div class="adv-item"><h4>Discord 優質社群</h4><p>每周四次直播 + 專員協助。</p></div>
+          <div class="adv-item"><h4>獨家資源</h4><p>線上線下活動與培訓，資源共享。</p></div>
+          <div class="adv-item"><h4>優厚報酬</h4><p>依推廣成效，返佣豐厚。</p></div>
+        </div>
       </div>
-
-      <div class="adv-box">
-        <h4>Discord 優質社群</h4>
-        <p>每周四次技術分析直播，帶領所有會員成長；群組專員管理，協助會員完成稅費結算。</p>
-      </div>
-
-      <div class="adv-box">
-        <h4>獨家資源</h4>
-        <p>享有專業培訓和推廣資源，社群經營和資源共享，線上線下活動助力。</p>
-      </div>
-
-      <div class="adv-box">
-        <h4>優厚報酬</h4>
-        <p>根據推廣成效，獲得豐厚獎勵和返現。</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-media">
-    <img src="Capture.JPG" alt="Bitunix banner">
-  </div>
-</section>
-
+      <div class="card-media"><img src="Capture.JPG" alt="Promotional image"></div>
+    </section>
+    
     <!-- ───── Section 4 ────────────────────────────── Training & Support -->
     <section id="training" class="card" style="position:relative">
       <div class="arrow-col">
