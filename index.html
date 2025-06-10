@@ -11,72 +11,142 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
-    *{margin:0;padding:0;box-sizing:border-box;}
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family:'Inter', sans-serif;
-      line-height:1.6;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
       background: linear-gradient(135deg, #9b26ff 0%, #00e5ff 100%);
-      color:#F0F4F1;
-      scroll-behavior:smooth;
+      color: #F0F4F1;
+      scroll-behavior: smooth;
+      padding-top: 3.5rem;
     }
-
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      padding: 0.75rem 1rem;
+      z-index: 999;
+      text-align: center;
+    }
+    nav a {
+      color: #F0F4F1;
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: 700;
+    }
+    nav a:hover { text-decoration: underline; }
     section {
-      max-width:1100px;
-      width:90%;
-      margin:0 auto;
-      padding:4rem 1rem;
+      max-width: 1100px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 4rem 1rem;
     }
-
-    h1,h2,h3,h4 {
-      font-weight:700;
-      margin-bottom:1rem;
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
-
-    h1 {font-size: clamp(2rem,5vw,3rem);}
-    h2 {font-size: clamp(1.5rem,4vw,2rem);text-align:center;}
-
+    h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); text-align: center; }
     .card {
-      background:rgba(0,0,0,0.4);
-      border-radius:12px;
-      padding:2rem;
-      margin-bottom:3rem;
-      box-shadow:0 6px 20px rgba(0,0,0,0.2);
-      display:flex;
-      flex-wrap:wrap;
-      align-items:center;
-      gap:2rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
     }
-
-    .card.reverse{flex-direction:row-reverse;}
-
-    .card-media img{
-      width:100%;
-      border-radius:8px;
+    .card.reverse { flex-direction: row-reverse; }
+    .card-media img, .partner-card img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
     }
-
-    .fade-in{
-      opacity:0;
-      transform:translateY(20px);
-      transition:opacity 0.6s ease-out, transform 0.6s ease-out;
+    img { max-width: 100%; border-radius: 8px; display: block; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    ul li { margin-bottom: 0.5rem; }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-
-    .fade-in.visible{
-      opacity:1;
-      transform:translateY(0);
+    .partner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
     }
-
-    ul{padding-left:1.5rem;margin-bottom:1rem;}
-    ul li{margin-bottom:0.5rem;}
-
-    @media(max-width:768px){
-      .card{flex-direction:column;}
-      .card-media{order:-1;}
+    .partner-card { text-align: center; }
+    .arrow-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    .arrow-num {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: #9b26ff;
+      color: #fff;
+      font-weight: 700;
+      text-align: center;
+      line-height: 2rem;
+      margin-right: 0.75rem;
+    }
+    #training .card .arrow-col:last-child .arrow-num {
+      background: #00e5ff;
+      color: #000;
+    }
+    .table-wrap table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    .table-wrap th, .table-wrap td {
+      border: 1px solid rgba(240, 244, 241, 0.2);
+      padding: 0.5rem 0.8rem;
+      text-align: center;
+    }
+    .table-wrap th {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    #training .card {
+      align-items: flex-start;
+    }
+    .watermark {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      font-size: 5rem;
+      font-weight: 700;
+      color: #ffffff0d;
+      pointer-events: none;
+      user-select: none;
+    }
+    @media (max-width: 768px) {
+      .card { flex-direction: column; }
+      .card-media { order: -1; }
     }
   </style>
 </head>
 <body>
+  <nav>
+    <a href="#intro">首頁</a>
+    <a href="#speed">市場發展</a>
+    <a href="#advantages">計劃優勢</a>
+    <a href="#training">培訓支援</a>
+    <a href="#tiers">代理制度</a>
+    <a href="#benefits">夥伴福利</a>
+    <a href="#flow">推廣流程</a>
+  </nav>
 
+<!-- Your existing content remains unchanged below -->
+<!-- Add id="intro", id="speed", etc. to corresponding sections for nav links -->
 <section class="fade-in">
   <div class="card">
     <div>
@@ -305,16 +375,18 @@
 </section>
 
 <script>
-  const observer=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('visible');
         observer.unobserve(entry.target);
       }
     });
-  },{threshold:0.1});
-
-  document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
+
+
+
