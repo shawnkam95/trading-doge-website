@@ -142,6 +142,18 @@
     color: var(--clr-accent);    /* cyan text for key phrases */
     font-weight: 700;
     }
+
+    /* Highlighted link style */
+    .highlight-link {
+    color: var(--clr-accent);               /* bright accent text */
+    font-weight: 700;
+    text-decoration: underline;
+    text-shadow: 0 0 5px var(--clr-accent); /* soft glow effect */
+    transition: text-shadow 0.3s ease;
+    }
+    .highlight-link:hover {
+    text-shadow: 0 0 10px var(--clr-accent);/* stronger glow on hover */
+    }
   </style>
 </head>
 <body>
@@ -152,7 +164,7 @@
     <!-- ───── Section 1 ────────────────────────────── Intro -->
     <section id="intro" class="card">
       <div class="card-content">
-        <h1>【Bitunix｜Trading Doge代理計劃】</h1>
+        <h1>Bitunix｜Trading Doge代理計劃</h1>
         <br>
         <p><strong>社群團隊扶持，助力你的加密推廣</strong></p>
         <p>虛擬貨幣市場正在快速成⻑，其市值不斷攀升。</p>
@@ -267,8 +279,20 @@
       <div class="card-content">
         <h2>推廣計畫流程</h2>
         <ul class="checklist">
-          <li>前往Trading Doge官網註冊並通過KYC。</li>
-          <li>請附推廣連結，向社群/朋友分享Trading Doge特色與註冊教學。</li>
+          <li>
+              前往Trading Doge
+              <a href="https://www.bitunix.com/register?vipCode=TTDG" target="_blank" class="highlight-link">
+              官網註冊
+             </a>
+              並通過KYC。
+          </li>
+          <li>
+              請附
+            <a href="https://discord.com/invite/maQFevt8" target="_blank" class="highlight-link">
+              推廣連結
+            </a>
+            ，向社群/朋友分享Trading Doge特色與註冊教學。
+          </li>
           <li>完成首筆交易後即可開始獲得返傭。</li>
           <li>每月業績結算並次月自動升級等級，獎勵自動發放。</li>
         </ul>
