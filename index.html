@@ -139,6 +139,25 @@
         width:100%;
         height:auto;
          }
+        /* stack everything top-to-bottom (your .card rule already does this,
+           but we add a few tweaks just for #tiers) */
+        #tiers.card{
+        flex-direction:column;   /* explicit for clarity */
+        }
+
+        /* Image wrapper */
+        #tiers .card-media{
+        order:-1;            /* image FIRST; flip to 1 if you prefer it last */
+        width:100%;
+        margin-bottom:1.5rem;/* gap before the text block */
+        }
+
+        /* Make the photo scale, not crop */
+        #tiers .card-media img{
+        width:100%;
+        height:auto;         /* keep natural aspect ratio */
+        object-fit:contain;  /* show whole booth image, no cropping */
+        }
       }
 
     /* emphasise first & last paragraph in intro */
