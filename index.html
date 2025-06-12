@@ -127,7 +127,19 @@
       .card{flex-direction:column}
       .card-media{order:-1;width:100%}
       #backToTop{width:48px;height:48px;bottom:1rem;right:1rem}
-    }
+       #speed.speed-grid{
+        grid-template-columns: 1fr;   /* one column */
+        }
+        /* give the chart some breathing room below the text column */
+        #speed .chart-col{
+        margin-top:1.5rem;            /* space between timeline & chart */
+        }
+        /* chart image fills width but scales proportionally */
+        #speed .chart-col img{
+        width:100%;
+        height:auto;
+         }
+      }
 
     /* emphasise first & last paragraph in intro */
     #intro p:first-of-type,
