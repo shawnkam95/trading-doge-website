@@ -154,6 +154,12 @@
     .highlight-link:hover {
     text-shadow: 0 0 10px var(--clr-accent);/* stronger glow on hover */
     }
+
+    /* grid layout specifically for #speed */
+    .speed-grid            {display:grid; grid-template-columns:1fr 45%; grid-template-rows:auto 1fr; gap:2rem;}
+    .speed-grid h2         {grid-column:1 / -1;}          /* heading full width   */
+    .speed-grid .timeline-col,
+    .speed-grid .chart-col {align-self:start;}            /* top-align both cells */
   </style>
 </head>
 <body>
@@ -176,9 +182,9 @@
     </section>
 
     <!-- ───── Section 2 ────────────────────────────── Timeline -->
-    <section id="speed" class="card">
-      <div class="card-content">
-        <h2>不容忽視的發展速度</h2>
+      <section id="speed" class="card speed-grid">
+       <h2 data-i18n="timeline_title">不容忽視的發展速度</h2>
+       <div class="timeline-col">
         <ul class="timeline">
           <li><strong>2009年</strong> 
             <p>比特幣誕⽣，開啟虛擬貨幣時代。</p></li>
@@ -194,7 +200,7 @@
             <p>预计每枚⽐特幣突破 100,356 美元的歷史最⾼點。</p></li>
         </ul>
       </div>
-      <div class="card-media"><img src="89465.png" alt="Crypto market cap chart"></div>
+      <div class="chart-col"><img src="89465.png" alt="Crypto market cap chart"></div>
     </section>
 
 <!-- ============== SECTION 3 ============== -->
