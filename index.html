@@ -160,6 +160,11 @@
     .speed-grid h2         {grid-column:1 / -1;}          /* heading full width   */
     .speed-grid .timeline-col,
     .speed-grid .chart-col {align-self:start;}            /* top-align both cells */
+    /* Place after your existing .speed-grid rules */
+  .speed-grid             {grid-template-columns: 1fr 45%; grid-auto-rows: auto;}
+  .speed-grid .chart-col  {overflow: hidden;}   /* clip any spillover just in case */
+  .speed-grid img         {display: block; width: 100%; height: auto; object-fit: contain;}
+
   </style>
 </head>
 <body>
