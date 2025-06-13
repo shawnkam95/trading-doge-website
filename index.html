@@ -846,16 +846,26 @@ const translations = {
 <script>
   const params = new URLSearchParams(window.location.search);
   const refCode = params.get('ref');
-  console.log('Ref code:', refCode);
 
-  const link = document.getElementById('signup-link');
-  console.log('Signup link element:', link);
-
-  if (refCode && link) {
-    const newHref = `https://www.bitunix.com/register?vipCode=${refCode}`;
-    console.log('Setting href to:', newHref);
-    link.href = newHref;
+  function updateReferralLink() {
+    const link = document.getElementById('signup-link');
+    if (refCode && link) {
+      link.href = `https://www.bitunix.com/register?vipCode=${refCode}`;
+    }
   }
+
+  // Update referral link each time language changes
+  document.getElementById('lang-select').addEventListener('change', e => {
+    setLanguage(e.target.value);
+    updateReferralLink(); // call here after translation
+  });
+
+  // Initial load
+  document.addEventListener('DOMContentLoaded', () => {
+    setLanguage('ZH');
+    updateReferralLink(); // initial call after default translation
+  });
+</script>
 </script>
 </body>
 </html>
