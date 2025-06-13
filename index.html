@@ -352,7 +352,7 @@
         <ul class="checklist">
           <li data-i18n="flow_step1">
               前往Trading Doge
-              <a href="https://www.bitunix.com/register?vipCode=TTDG" target="_blank" class="highlight-link">
+              <a id="signup-link" href="https://www.bitunix.com/register?vipCode=TTDG" target="_blank" class="highlight-link">
               官網註冊
              </a>
               並通過KYC。
@@ -843,6 +843,14 @@ const translations = {
     setLanguage('ZH');
   });
 </script>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const refCode = params.get('ref');
+
+  if(refCode) {
+  document.getElementById('signup-link').href = `"https://www.bitunix.com/register?vipCode=${refCode}"`;
+  }
+  </script>
 </body>
 </html>
 
