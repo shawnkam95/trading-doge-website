@@ -53,7 +53,7 @@
 
     /* ─── Section‑specific tweaks ───────────────────────── */
     /* intro & generic alignment */
-    #intro.card,#speed.card,#advantages.card,#tiers.card, #timeline.card{align-items:flex-start}
+    #intro.card,#speed.card,#advantages.card, #timeline.card{align-items:flex-start}
 
     /* grid helper for 2‑4 column layouts */
     .grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.5rem}
@@ -139,25 +139,6 @@
         width:100%;
         height:auto;
          }
-        /* stack everything top-to-bottom (your .card rule already does this,
-           but we add a few tweaks just for #tiers) */
-        #tiers.card{
-        flex-direction:column;   /* explicit for clarity */
-        }
-
-        /* Image wrapper */
-        #tiers .card-media{
-        order:-1;            /* image FIRST; flip to 1 if you prefer it last */
-        width:100%;
-        margin-bottom:1.5rem;/* gap before the text block */
-        }
-
-        /* Make the photo scale, not crop */
-        #tiers .card-media img{
-        width:100%;
-        height:auto;         /* keep natural aspect ratio */
-        object-fit:contain;  /* show whole booth image, no cropping */
-        }
       }
 
     /* emphasise first & last paragraph in intro */
@@ -297,39 +278,6 @@
         <div class="arrow-item"><span class="arrow-num">2</span><strong data-i18n="promo2_title">開發⽤戶</strong><br><p data-i18n="promo2_desc">積極主動推廣Trading Doge社群，推廣潛在交易⽤戶，引導新⽤戶註冊交易。</p></div>
         <div class="arrow-item"><span class="arrow-num">3</span><strong data-i18n="promo3_title">⽤戶管理</strong><br><p data-i18n="promo3_desc">以正面的態度引領新⽤戶加入幣圈⽣態；幫助⽤戶解決⼀般業務問題。</p></div>
       </div>
-    </section>
-
-    <!-- ───── Section 5 ────────────────────────────── Tier System -->
-    <section id="tiers" class="card">
-      <div class="card-content">
-        <h2 data-i18n="tier_title">【Trading Doge代理制度｜單月升級 × ⾼傭獎勵】</h2>
-        <p data-i18n="tier_desc">為了扶持更多優質代理，Trading Doge推出全新代理獎勵制度：單月達標，下月立即升級，無須綁約，無須等待！</p>
-
-        <h3 data-i18n="tier_levels">【等級說明】</h3>
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th data-i18n="tier_col1">等級</th><th data-i18n="tier_col2">累積交易額(USDT)</th><th data-i18n="tier_col3">返傭%</th></tr></thead>
-            <tbody>
-              <tr><td data-i18n="tier_L0">L0｜社群扶持代理</td><td data-i18n="tier_L0_vol">50,000</td><td data-i18n="tier_L0_rate">15%</td></tr>
-              <tr><td data-i18n="tier_L1">L1｜啟航代理</td><td>3,000,000</td><td>20%</td></tr>
-              <tr><td data-i18n="tier_L2">L2｜成⻑領航員</td><td>5,000,000</td><td>25%</td></tr>
-              <tr><td data-i18n="tier_L3">L3｜⾼效合夥⼈</td><td>10,000,000</td><td>30%</td></tr>
-              <tr><td data-i18n="tier_L4">L4｜戰略核⼼代理</td><td data-i18n="tier_L4_vol">達標2個月>10,000,000</td><td>35%</td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <ul class="checklist">
-          <li data-i18n="tier_note1">單月達標次月即可升級對應等級(L1–L3)，無需連續。</li>
-          <li data-i18n="tier_note2">僅有 L4 需要連續兩月達標才可晉升；若未連續達標，仍可保有當月已達等級資格。</li>
-          <li data-i18n="tier_note3">當⽉交易量與獎勵皆可即時查詢，獎勵⾄當⽉⽣效。</li>
-        </ul>
-
-        <h3 data-i18n="extra_title">【額外激勵】</h3>
-        <p data-i18n="milestone_block"><strong>⾥程碑獎勵</strong><br>L3 ⾼效合夥⼈獎勵 100 USDT (達標⾄即)<br>L4 戰略核⼼代理獎勵 200 USDT (⼀次性)</p>
-        <p data-i18n="volume_block"><strong>交易量獎勵</strong><br>不同等級每達 100,000 USDT交易量，即獲 10 USDT 獎勵無上限累加。</p>
-      </div>
-      <div class="card-media"><img src="Booth.JPG" alt="Bitunix booth"></div>
     </section>
 
     <!-- ───── Section 6 ────────────────────────────── Partner Cards -->
