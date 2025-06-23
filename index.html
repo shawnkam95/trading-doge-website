@@ -12,13 +12,13 @@
 
   <!-- ─── Core palette & utility styles ─────────────────────────── -->
   <style>
-    :root {
-      /* brand colours */
-      --clr-primary:#9b26ff;  /* purple   */
-      --clr-accent :#00e5ff;  /* cyan      */
-      --clr-bg     :#161b27;  /* navy/black*/
-      --clr-surface:#224d7c;  /* slightly lighter panel */
-      --clr-text   :#F0F4F1;  /* off‑white body text    */
+  :root {
+    /* brand colours – Mito scheme */
+      --clr-primary:#A9F00F;  /* neon-lime accent          */
+      --clr-accent :#A9F00F;  /* same accent for consistency */
+      --clr-bg     :#151c19;  /* deep-navy canvas           */
+      --clr-surface:#1a2330;  /* slightly lighter panel     */
+      --clr-text   :#F0F4F1;  /* keep off-white body text   */
 
       --radius:12px;
       --shadow:0 4px 18px rgba(0,0,0,.35);
@@ -29,7 +29,21 @@
       font-family:'Inter',sans-serif;
       line-height:1.6;
       color:var(--clr-text);
-      background:linear-gradient(135deg,#9b26ff 0%,#00e5ff 100%);
+      background:
+      /* top-right glow */
+      radial-gradient(
+        650px 650px at 85% 15%,     /* size & position */
+        rgba(169,240,15,0.35) 0%,   /* bright centre   */
+        rgba(169,240,15,0) 60%      /* fade to transparent */
+      ),
+      /* bottom-left glow */
+      radial-gradient(
+        700px 700px at 10% 85%,
+        rgba(169,240,15,0.30) 0%,
+        rgba(169,240,15,0) 65%
+      ),
+      /* base canvas colour */
+      var(--clr-bg);
       min-height:100dvh;
       display:flex;
       flex-direction:column;
