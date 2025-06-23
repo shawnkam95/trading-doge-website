@@ -62,6 +62,14 @@
     .card-media img{display:block;width:100%;border-radius:var(--radius);object-fit:cover}
     .card-content{flex:1}
 
+    .card-media video{
+     width:100%;
+     height:auto;
+     object-fit:cover;      /* fill container without distortion */
+     border-radius:var(--radius);
+    }
+
+    
     /* big watermark helper */
     .watermark{position:absolute;right:1rem;bottom:1rem;font-size:min(20vw,260px);font-weight:700;color:#ffffff0d;white-space:nowrap;pointer-events:none}
 
@@ -238,7 +246,15 @@
         <p data-i18n="intro_p3">踏入幣圈的世界不嫌晚，Trading Doge社群帶你從0到1打造自己Trading成⻑之路！</p>
         <p data-i18n="intro_p4">加入我們，打造驚人被動收益!!</p>
       </div>
-      <div class="card-media"><img src="TTDG 1.JPG" alt="Trading Doge booth"></div>
+      <div class="card-media">
+      <video autoplay muted loop playsinline
+         poster="ambassador-poster.jpg"
+         style="width:100%; height:auto; object-fit:cover; border-radius:var(--radius);">
+        <source src="Ambassador.MP4" type="video/mp4">
+        <!-- Fallback text if video cannot play -->
+        Your browser does not support the video tag.
+      </video>
+      </div>
     </section>
 
     <!-- ───── Section 2 ────────────────────────────── Timeline -->
@@ -306,6 +322,22 @@
         </div>
       </div>
     </section>
+
+    <!-- ───── Section 7 ────────────────────────────── Global Exposure -->
+    <section id="global-exposure" class="card">
+    <div class="card-content">
+    <h2>Global Exposure – TOKEN2049 Dubai</h2>
+    <p>We showcased Trading Doge during TOKEN2049 Week in Dubai, connecting with the global crypto community.</p>
+    </div>
+    <div class="card-media">
+    <video autoplay muted loop playsinline
+           poster="token2049-poster.jpg"
+           style="width:100%; height:auto; object-fit:cover; border-radius:var(--radius);">
+      <source src="Token2049.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
+      </div>
+     </section>
 
     <!-- ───── Section 7 ────────────────────────────── Flow Checklist -->
     <section id="flow" class="card" style="position:relative">
